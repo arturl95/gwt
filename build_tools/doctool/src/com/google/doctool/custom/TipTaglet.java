@@ -44,12 +44,20 @@ public class TipTaglet extends AbstractTaglet {
     }
     StringBuilder result = new StringBuilder("<DT><B>Tip:</B></DT><DD>");
     if (list.size() == 1) {
+<<<<<<< HEAD
       result.append(getText(list.get(0)));
+=======
+      result.append(getHtmlContent(list.get(0)));
+>>>>>>> upstream/release/2.11
     } else {
       result.append("<UL>");
       for (int i = 0; i < list.size(); i++) {
         result.append("<LI>");
+<<<<<<< HEAD
         result.append(getText(list.get(i)));
+=======
+        result.append(getHtmlContent(list.get(i)));
+>>>>>>> upstream/release/2.11
         result.append("</LI>");
       }
       result.append("</UL>");

@@ -38,7 +38,12 @@ public class ResourceIncluder {
     }
   }
 
+<<<<<<< HEAD
   public static String getResourceFromClasspathScrubbedForHTML(String partialPath) throws IOException {
+=======
+  public static String getResourceFromClasspathScrubbedForHTML(String partialPath)
+          throws IOException {
+>>>>>>> upstream/release/2.11
     String contents;
     contents = getFileFromClassPath(partialPath);
     contents = scrubForHtml(contents);

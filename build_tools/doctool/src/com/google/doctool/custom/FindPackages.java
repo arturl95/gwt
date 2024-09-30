@@ -85,7 +85,7 @@ public class FindPackages {
    */
   private static final String[] SOURCE_DIRS = {
       "user/src", "user/javadoc", "user/super", "dev/core/src",
-      "dev/core/super"};
+      "dev/core/super", "build/out/user/jakarta-src"};
 
   /**
    * Individual user classes to include, even if the rest of their packages
@@ -135,14 +135,20 @@ public class FindPackages {
       out.println("JAVA_PKGS=\\");
       for (int i = 0; i < JAVA_PKGS.length; i++) {
         if (i < JAVA_PKGS.length - 1) {
-          out.println(JAVA_PKGS[i] + ";\\");
+          out.println(JAVA_PKGS[i] + ",\\");
         } else {
           out.println(JAVA_PKGS[i]);
         }
       }
       out.println("# The last package should not have a trailing semicolon");
       out.println();
+<<<<<<< HEAD
       out.println("# Individual classes to include when we don't want to include an entire package");
+=======
+      out.println(
+              "# Individual classes to include when we don't want to include an entire package"
+      );
+>>>>>>> upstream/release/2.11
       out.println("USER_CLASSES=\\");
 
       // Output a package-info.java once for each package
