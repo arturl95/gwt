@@ -142,13 +142,9 @@ public class FindPackages {
       }
       out.println("# The last package should not have a trailing semicolon");
       out.println();
-<<<<<<< HEAD
-      out.println("# Individual classes to include when we don't want to include an entire package");
-=======
       out.println(
               "# Individual classes to include when we don't want to include an entire package"
       );
->>>>>>> upstream/release/2.11
       out.println("USER_CLASSES=\\");
 
       // Output a package-info.java once for each package

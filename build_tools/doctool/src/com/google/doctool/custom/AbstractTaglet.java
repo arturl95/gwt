@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-package com.google.doctool.custom;
-
-import com.sun.source.doctree.DocTree;
-=======
 /*
  * Copyright 2022 Google Inc.
  *
@@ -24,7 +19,6 @@ import com.sun.source.doctree.DocTree;
 import com.sun.source.doctree.EndElementTree;
 import com.sun.source.doctree.EntityTree;
 import com.sun.source.doctree.StartElementTree;
->>>>>>> upstream/release/2.11
 import com.sun.source.doctree.TextTree;
 import com.sun.source.util.DocTreeScanner;
 import jdk.javadoc.doclet.Doclet;
@@ -46,20 +40,6 @@ public abstract class AbstractTaglet implements Taglet {
     }
 
     /**
-<<<<<<< HEAD
-     * Given a tag, returns the text within that tag.
-     *
-     * @param tag the tag to read the text from
-     * @return the body of the textnode within that tag
-     */
-    protected String getText(DocTree tag) {
-        return tag.accept(new DocTreeScanner<String, Void>() {
-            @Override
-            public String visitText(TextTree node, Void unused) {
-                return node.getBody();
-            }
-        }, null);
-=======
      * Given a tag, returns the html within that tag.
      *
      * @param tag the tag to read the text from
@@ -107,7 +87,6 @@ public abstract class AbstractTaglet implements Taglet {
             }
         }, null);
         return sb.toString();
->>>>>>> upstream/release/2.11
     }
 
     /**
@@ -118,12 +97,8 @@ public abstract class AbstractTaglet implements Taglet {
      * @param element the element that the message applies to
      * @param docTree the doctree node that the message applies to
      */
-<<<<<<< HEAD
-    protected void printMessage(Diagnostic.Kind kind, String message, Element element, DocTree docTree) {
-=======
     protected void printMessage(Diagnostic.Kind kind, String message, Element element,
                                 DocTree docTree) {
->>>>>>> upstream/release/2.11
         env.getDocTrees().printMessage(
                 kind,
                 message,

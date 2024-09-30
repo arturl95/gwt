@@ -45,11 +45,7 @@ public class ExampleTaglet extends AbstractTaglet {
     StringBuilder results = new StringBuilder();
     DocTrees trees = env.getDocTrees();
     for (DocTree tag : list) {
-<<<<<<< HEAD
-      String linkText = getText(tag);
-=======
       String linkText = getHtmlContent(tag);
->>>>>>> upstream/release/2.11
 
       // Using the linktext and the current element as context, find the referenced Element if any
       final Element targetElement = trees.getElement(

@@ -20,19 +20,11 @@ import com.google.doctool.ResourceIncluder;
 import com.sun.source.doctree.DocTree;
 
 import javax.lang.model.element.Element;
-<<<<<<< HEAD
-=======
 import javax.tools.Diagnostic;
->>>>>>> upstream/release/2.11
 import java.io.IOException;
 import java.util.EnumSet;
 import java.util.List;
 import java.util.Set;
-<<<<<<< HEAD
-
-import static javax.tools.Diagnostic.Kind.ERROR;
-=======
->>>>>>> upstream/release/2.11
 
 /**
  * A taglet for slurping in the content of artbitrary files appearing on the
@@ -49,23 +41,15 @@ public class IncludeTaglet extends AbstractTaglet {
   public String toString(List<? extends DocTree> list, Element element) {
     StringBuilder results = new StringBuilder();
     for (DocTree docTree : list) {
-<<<<<<< HEAD
-      String text = getText(docTree);
-=======
       String text = getHtmlContent(docTree);
->>>>>>> upstream/release/2.11
 
       try {
         String contents = ResourceIncluder.getResourceFromClasspathScrubbedForHTML(text);
         results.append("<blockquote><pre>").append(contents).append("</pre></blockquote>");
       } catch (IOException e) {
         e.printStackTrace();
-<<<<<<< HEAD
-        printMessage(ERROR, "Error in reading file: " + e.getMessage(), element, docTree);
-=======
         printMessage(Diagnostic.Kind.ERROR, "Error in reading file: " + e.getMessage(), element,
                 docTree);
->>>>>>> upstream/release/2.11
         // return empty to let javadoc report this
         return "";
       }
